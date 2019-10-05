@@ -9,6 +9,7 @@ import numpy as np
 import cv2
 from pathlib import Path
 from matplotlib import pyplot as plt
+from matplotlib.patches import Ellipse
 
 
 def showPosition(image_path, info):
@@ -25,7 +26,11 @@ def showPosition(image_path, info):
         z, y, x, diameter_y, diameter_x = singlePosition[0], singlePosition[1], singlePosition[2], singlePosition[3], \
                                           singlePosition[4]
         plt.imshow(image[np.int(z), :, :], cmap='gray')
-        plt.gca().add_patch(plt.Rectangle(xy=(x, y), height=diameter_y, width=diameter_x, edgecolor='r', fill=False))
+        plt.gca().add_patch(
+            Ellipse(xy=(x, y), height=(diameter_x), width=(diameter_y), edgecolor='r', fill=False)
+            # plt.Circle(xy=(x, y), radius=(diameter_x / 2), edgecolor='r', fill=False)
+            # plt.Rectangle(xy=(x, y), height=(diameter_x / 2), width=(diameter_y / 2), edgecolor='r', fill=False)
+        )
         plt.show()
         print(
             f"Index:{idx}| Coordinates: coord_z {z}, coord_y {y}, coord_x {x}| Diameter: dia_y {diameter_y}, dia_x {diameter_x}")
