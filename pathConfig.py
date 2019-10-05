@@ -10,7 +10,15 @@ pathConfig = {
     # MHD or DCM
     # "raw_data_path": str(Path(r'')),
     # Numpy array
-    "numpy_image_path": str(Path(r'C:\Users\GHM\Desktop\singleTest\preprocess\singleTest\320831_clean.npy')),
+    "numpy_image_path": str(Path(r'C:\Users\GHM\Desktop\singleTest\preprocess\singleTest\512678_clean.npy')),
     # Label
-    "label_path": str(Path(r'C:\Users\GHM\Desktop\singleTest\preprocess\singleTest\320831_label.npy')),
+    "label_path": str(Path(r'C:\Users\GHM\Desktop\singleTest\preprocess\singleTest\512678_label.npy')),
+}
+pathConfig_local = {
+    # MHD or DCM
+    # "raw_data_path": str(Path(r'')),
+    # Numpy array
+    "numpy_image_path": str(Path(r'C:/Users/GHM/Desktop/tmp/CropImage3931.npy')),
+    # Label
+    "label_path": str(Path(r'C:/Users/GHM/Desktop/tmp/Label3931.npy')),
 }
